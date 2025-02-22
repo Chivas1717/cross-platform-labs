@@ -1,3 +1,4 @@
+import 'package:app/calculators/lab3.dart';
 import 'package:flutter/material.dart';
 
 import '../calculators/lab1.dart'; // <-- Імпортуємо файл з калькуляторами (див. нижче)
@@ -26,6 +27,15 @@ class HomeScreen extends StatelessWidget {
         {
           'title': 'Завдання 1',
           'widget': Lab2Task1Calculator(), // <-- Новий екран
+        },
+      ],
+    },
+    {
+      'title': 'Лабораторна робота №3',
+      'calculators': [
+        {
+          'title': 'Завдання 1',
+          'widget': Lab3Task1Calculator(), // <-- Новий екран
         },
       ],
     },
