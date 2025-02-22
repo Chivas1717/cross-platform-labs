@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Task1Calculator extends StatefulWidget {
+class Lab1Task1Calculator extends StatefulWidget {
   @override
-  _Task1CalculatorState createState() => _Task1CalculatorState();
+  _Lab1Task1CalculatorState createState() => _Lab1Task1CalculatorState();
 }
 
-class _Task1CalculatorState extends State<Task1Calculator> {
+class _Lab1Task1CalculatorState extends State<Lab1Task1Calculator> {
   // Контролери для текстових полів
   final Map<String, TextEditingController> controllers = {
     'H': TextEditingController(text: '3,4'), // Варіант №4
@@ -83,7 +83,7 @@ class _Task1CalculatorState extends State<Task1Calculator> {
         'A=${controllers['A']!.text}%';
 
     return SingleChildScrollView(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -94,24 +94,24 @@ class _Task1CalculatorState extends State<Task1Calculator> {
                 controller: entry.value,
                 decoration: InputDecoration(
                   labelText: '${entry.key}, %',
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                 ),
                 keyboardType: TextInputType.number,
               ),
             );
           }).toList(),
-          SizedBox(height: 16.0),
+          const SizedBox(height: 16.0),
           ElevatedButton(
             onPressed: calculateTask1,
-            child: Text('Calculate'),
+            child: const Text('Calculate'),
           ),
-          SizedBox(height: 24.0),
+          const SizedBox(height: 24.0),
           if (qph != null) ...[
             Text(
               '1. Для палива з компонентним складом: $inputComposition',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               '1.1. Коефіцієнт переходу від робочої до сухої маси становить: '
               '${dryMass?.toStringAsFixed(3)}',
@@ -120,7 +120,7 @@ class _Task1CalculatorState extends State<Task1Calculator> {
               '1.2. Коефіцієнт переходу від робочої до горючої маси становить: '
               '${combustibleMass?.toStringAsFixed(3)}',
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               '1.3. Склад сухої маси палива становитиме:\n'
               '   Hс=${hDry?.toStringAsFixed(2)}%; '
@@ -130,7 +130,7 @@ class _Task1CalculatorState extends State<Task1Calculator> {
               'Oс=${oDry?.toStringAsFixed(2)}%; '
               'Aс=${aDry?.toStringAsFixed(2)}%',
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               '1.4. Склад горючої маси палива становитиме:\n'
               '   Hг=${hComb?.toStringAsFixed(2)}%; '
@@ -140,7 +140,7 @@ class _Task1CalculatorState extends State<Task1Calculator> {
               'Oг=${oComb?.toStringAsFixed(2)}%; '
               'Aг=${aComb?.toStringAsFixed(2)}%',
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               '1.5. Нижча теплота згоряння для робочої маси: '
               '${qph?.toStringAsFixed(4)} МДж/кг',
@@ -153,7 +153,7 @@ class _Task1CalculatorState extends State<Task1Calculator> {
               '1.7. Нижча теплота згоряння для горючої маси: '
               '${qdafh?.toStringAsFixed(4)} МДж/кг',
             ),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
           ],
         ],
       ),
@@ -227,7 +227,7 @@ class _Task2CalculatorState extends State<Task2Calculator> {
         'Qidaf=${controllers['Qdaf']!.text} МДж/кг';
 
     return SingleChildScrollView(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -244,24 +244,24 @@ class _Task2CalculatorState extends State<Task2Calculator> {
                       : isQ
                           ? '${entry.key} (МДж/кг)'
                           : '${entry.key}, %',
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                 ),
                 keyboardType: TextInputType.number,
               ),
             );
           }).toList(),
-          SizedBox(height: 16.0),
+          const SizedBox(height: 16.0),
           ElevatedButton(
             onPressed: calculateTask2,
-            child: Text('Calculate'),
+            child: const Text('Calculate'),
           ),
-          SizedBox(height: 24.0),
+          const SizedBox(height: 24.0),
           if (qWork != null) ...[
             Text(
               '2. Для складу горючої маси мазуту, що задано:\n$inputComposition',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               '2.1. Склад робочої маси мазуту становитиме:\n'
               '   Hр=${hWork?.toStringAsFixed(2)}%; '
@@ -272,12 +272,12 @@ class _Task2CalculatorState extends State<Task2Calculator> {
               'Wр=${wWork?.toStringAsFixed(2)}%; '
               'Aр=${aWork?.toStringAsFixed(2)}%',
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               '2.2. Нижча теплота згоряння мазуту на робочу масу: '
               '${qWork?.toStringAsFixed(2)} МДж/кг',
             ),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
           ],
         ],
       ),

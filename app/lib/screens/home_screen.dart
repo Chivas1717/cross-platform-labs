@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../calculators/lab1.dart'; // <-- Імпортуємо файл з калькуляторами (див. нижче)
+import '../calculators/lab2.dart';
 import 'lab_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       'calculators': [
         {
           'title': 'Завдання 1',
-          'widget': Task1Calculator(),
+          'widget': Lab1Task1Calculator(),
         },
         {
           'title': 'Завдання 2',
@@ -19,29 +20,28 @@ class HomeScreen extends StatelessWidget {
         },
       ],
     },
-    // Додайте інші лаби за потребою
-    // {
-    //   'title': 'Лаба 2',
-    //   'calculators': [
-    //     {
-    //       'title': 'Калькулятор 1',
-    //       'widget': YourAnotherCalculatorWidget(),
-    //     },
-    //   ],
-    // },
+    {
+      'title': 'Лабораторна робота №2',
+      'calculators': [
+        {
+          'title': 'Завдання 1',
+          'widget': Lab2Task1Calculator(), // <-- Новий екран
+        },
+      ],
+    },
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Головна сторінка'),
+        title: const Text('Головна сторінка'),
       ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.teal,
               ),
@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Головна'),
+              title: const Text('Головна'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'Ласкаво просимо до додатку!',
           style: TextStyle(fontSize: 24),
