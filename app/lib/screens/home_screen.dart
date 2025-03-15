@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../calculators/lab1.dart'; // <-- Імпортуємо файл з калькуляторами (див. нижче)
 import '../calculators/lab2.dart';
 import '../calculators/lab4.dart';
+import '../calculators/lab5.dart';
 import 'lab_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -54,6 +55,19 @@ class HomeScreen extends StatelessWidget {
         {
           'title': 'Термічна стійкість',
           'widget': ThermalStabilityCalculator(),
+        },
+      ],
+    },
+    {
+      'title': 'Лабораторна робота №5',
+      'calculators': [
+        {
+          'title': 'Task 1',
+          'widget': Lab5Task1Calculator(),
+        },
+        {
+          'title': 'Task 2',
+          'widget': Lab5Task2Calculator(),
         },
       ],
     },
