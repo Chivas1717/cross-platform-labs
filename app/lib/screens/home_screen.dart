@@ -5,6 +5,7 @@ import '../calculators/lab1.dart'; // <-- Імпортуємо файл з ка�
 import '../calculators/lab2.dart';
 import '../calculators/lab4.dart';
 import '../calculators/lab5.dart';
+import '../calculators/lab6.dart';
 import 'lab_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -68,6 +69,15 @@ class HomeScreen extends StatelessWidget {
         {
           'title': 'Task 2',
           'widget': Lab5Task2Calculator(),
+        },
+      ],
+    },
+    {
+      'title': 'Лабораторна робота №6',
+      'calculators': [
+        {
+          'title': 'Task 1',
+          'widget': Lab6Task1Calculator(),
         },
       ],
     },
