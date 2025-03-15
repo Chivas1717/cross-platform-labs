@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../calculators/lab1.dart'; // <-- Імпортуємо файл з калькуляторами (див. нижче)
 import '../calculators/lab2.dart';
+import '../calculators/lab4.dart';
 import 'lab_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -36,6 +37,23 @@ class HomeScreen extends StatelessWidget {
         {
           'title': 'Завдання 1',
           'widget': Lab3Task1Calculator(), // <-- Новий екран
+        },
+      ],
+    },
+    {
+      'title': 'Лабораторна робота №4',
+      'calculators': [
+        {
+          'title': 'Трифазне КЗ',
+          'widget': ThreePhaseSCCalculator(),
+        },
+        {
+          'title': 'Однофазне КЗ',
+          'widget': SinglePhaseSCCalculator(),
+        },
+        {
+          'title': 'Термічна стійкість',
+          'widget': ThermalStabilityCalculator(),
         },
       ],
     },
